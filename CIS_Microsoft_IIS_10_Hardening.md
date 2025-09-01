@@ -205,3 +205,43 @@ allowDoubleEscaping="false">
 ```
 
   </div>
+
+  ---
+  موارد ذیل مربوط به هاردنینگ وف و نرم افزار می باشد و آستانه پارامتر های درخواست های HTTP تنظیم می شود و این موارد در IIS نیز قابل تنظیم می باشند:
+1. maxAllowedContentLength
+2. maxURL request filter
+3. MaxQueryString request filter
+4. non-ASCII characters in URLs
+5. Double-Encoded requests
+6. allowUnlisted File Extensions
+
+- Ensure Default IIS web log location is moved
+- Ensure Advanced IIS logging is enabled
+- Ensure 'ETW Logging' is enabled
+- Ensure FTP requests are encrypted
+- Ensure FTP Logon attempt restrictions is enabled
+
+- Ensure HSTS Header is set
+- Ensure SSLv2 is Disabled
+- Ensure SSLv3 is Disabled
+- Ensure TLS 1.0 is Disabled
+- Ensure TLS 1.1 is Disabled
+- Ensure TLS 1.2 is Enabled
+
+
+موراد ذیل در تمامی web.config ها باید اعمال شود:
+```
+      <customHeaders>
+        <remove name="X-Powered-By" />
+        <add name="Header-Name" value="Header-Value" />
+        <add name="Referrer-Policy" value="no-referrer" />
+        <add name="X-Content-Type-Options" value="NOSNIFF" />
+        <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" />
+        <add name="X-Frame-Options" value="DENY" />
+        <add name="X-Permitted-Cross-Domain-Policies" value="none" />
+        <add name="Feature-Policy" value="vr:'none'" />
+        <add name="X-XSS-Protection" value="1; mode=block" />
+      </customHeaders>
+```
+
+
