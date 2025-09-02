@@ -252,4 +252,4 @@ allowDoubleEscaping="false">
 - Ensure AES 256/256 Cipher Suite is Enabled
 - Ensure TLS Cipher Suite ordering is Configured
 
- > اسکریپت موارد مطرح شده تا به اینجا، در فایل [IIS-Fixed.bat](IIS-Fixed.ba_) تهیه شده است.
+ > اسکریپت موارد مطرح شده، در فایل [IIS-Fixed.bat](IIS-Fixed.bat) تهیه شده است.
