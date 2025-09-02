@@ -206,8 +206,6 @@ allowDoubleEscaping="false">
 
   </div>
 
-  > اسکریپت موارد مطرح شده تا به اینجا، در فایل [IIS-Fixed.ba](IIS-Fixed.ba_) تهیه شده است.
-
 
   ---
   موارد ذیل مربوط به هاردنینگ وف و نرم افزار می باشد و آستانه پارامتر های درخواست های HTTP تنظیم می شود و این موارد در IIS نیز قابل تنظیم می باشند:
@@ -247,4 +245,11 @@ allowDoubleEscaping="false">
       </customHeaders>
 ```
 
+- Ensure NULL Cipher Suites is Disabled
+- Ensure DES Cipher Suites is Disable
+- Ensure RC4 Cipher Suites is Disabled
+- Ensure AES 128/128 Cipher Suite is Disabled
+- Ensure AES 256/256 Cipher Suite is Enabled
+- Ensure TLS Cipher Suite ordering is Configured
 
+ > اسکریپت موارد مطرح شده تا به اینجا، در فایل [IIS-Fixed.bat](IIS-Fixed.ba_) تهیه شده است.
